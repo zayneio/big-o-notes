@@ -174,3 +174,7 @@ log_all_pairs2([*1..5])
 # So this method becomes O(n * n), or O(n^2)
 # This means when elements get added, our methods # of operations increases quadratically.
 # The take away here is that as our input (array) increases, the # of operations for this method increases dramatically.
+
+# Tieing this back to rule 3, what would have happened if instead of nesting the same input, 
+# we had 2 diff inputs?
+# => Big O for this would become O(a * b) instead of O(n^2)
