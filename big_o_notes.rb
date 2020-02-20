@@ -107,7 +107,7 @@ def random(input)
     index += 1 # O(n)
   end
 
-  100.times do { puts 'hi' } # O(100)
+  100.times { puts 'hi' } # O(100)
 end
 # Initially, we might say 1 + 1 + n/2 + 100 = O(n/2 + 102)
 # But rule 2 is we want to drop the constants. We don't really care that big O here is O(n/2 + 102),
@@ -122,3 +122,40 @@ end
 
 
 # # # Rule 3: DIFFERENT TERMS FOR INPUTS # # #
+# What is Big O for the below method?
+# Example method:
+def double_loop(array1, array2)
+  array1.each do |arr|
+    puts arr # O(n)
+  end
+
+  array2.each do |arr|
+    puts arr # O(n)
+  end
+end
+
+# Initially we might think this is O(2n) (n + n), and after applying rule 2 this become O(n)
+# however this is incorrect.
+# Rule 3 states we must use different terms for different inputs.
+# So Big O for this method would actually be something like O(a + b)
+
+# But what happens if these loops are nested?
+# Challenge: Log all pairs of array [*1..5] (ex: [[1,1], [1,2], [1,3]...[2,1], [2,2]...])
+def log_all_pairs(array)
+  result = array.each_with_object([]) do |item, obj|
+    index = 0
+
+    while index < array.size
+      obj.push([item, array[index]])
+
+      index += 1
+    end
+  end
+
+  p result
+end
+
+log_all_pairs([*1..5])
+# => [[1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [5, 1], [5, 2], [5, 3], [5, 4], [5, 5]]
+
+
