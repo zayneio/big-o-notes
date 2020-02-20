@@ -178,3 +178,6 @@ log_all_pairs2([*1..5])
 # Tieing this back to rule 3, what would have happened if instead of nesting the same input, 
 # we had 2 diff inputs?
 # => Big O for this would become O(a * b) instead of O(n^2)
+
+
+# # # Rule 4: DROP NONDOMINANTS # # #
