@@ -24,7 +24,7 @@ find_element([*0..999], 25)
 # => index: 25, iterations: 1000
 
 
-# O(1) ==> Contant Time
+# O(1) ==> Constant Time
 # Regardless of the number of inputs, performance is constant
 
 # # # Example # # #
@@ -35,7 +35,7 @@ def first_element(array)
 end
 
 
-# Challenge: What is the Big O of the below function? 
+# Challenge: What is Big O of the below function? 
 # (Hint, you may want to go line by line)
 # Remember, loops are linear time
 def challenge(input)
@@ -57,7 +57,7 @@ end
 # => Big O(3 + 3n)
 # ( 3+ n + n + n )
 
-# ^ because we can't be certain of what the input (n) might be, we simply say O(n)
+# ^ because we can't be certain of what the input (n) might be, we simply say this is O(n)
 
 
 # Some Big O Rules
@@ -67,7 +67,7 @@ end
   # - Rule 4: Drop Non Dominants
 
 
-# # WORST CASE # # 
+# # # Rule 1: WORST CASE # # #
 
 # Notice that our above `find_element` method is not very performant. 
 # Regardless of wether the element we search for is in the first or last position of the array,
@@ -94,3 +94,31 @@ find_with_break([*0..999], 25)
 # Even though it's possible our algorithm could be O(1) if the item we are looking for is first in the array,
 # it doesn't matter because we can't be certain what the input is going to be. 
 # So then we will assume O(n) - Linear Time.
+
+
+
+# # # Rule 2: REMOVE CONSTANTS # # #
+# Let's take a random example method, what is big O?:
+def random(input)
+  index = 0 # O(1)
+  middle = input/2 # O(1)
+
+  while index < middle
+    index += 1 # O(n)
+  end
+
+  100.times do { puts 'hi' } # O(100)
+end
+# Initially, we might say 1 + 1 + n/2 + 100 = O(n/2 + 102)
+# But rule 2 is we want to drop the constants. We don't really care that big O here is O(n/2 + 102),
+# because in the grand scheme of things, we are focused on scalability; i.e. what happens when our 
+# inputs are getting larger and larger. As n gets bigger and bigger, we aren't concerned with an extra 100,
+# or that it is n/2, because this has a diminishing impact if our input size is something in the millions
+# or hundreds of millions for example. So we drop the constants and reduce this down to simply be O(n).
+
+# With Big O, we don't really care how steep the line is (assuming a graph of # of operations vs # of elements).
+# We care about how the line moves as our input increases.
+
+
+
+# # # Rule 3: DIFFERENT TERMS FOR INPUTS # # #
