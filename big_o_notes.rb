@@ -141,6 +141,7 @@ end
 
 # But what happens if these loops are nested?
 # Challenge: Log all pairs of array [*1..5] (ex: [[1,1], [1,2], [1,3]...[2,1], [2,2]...])
+# Here's my first approach:
 def log_all_pairs(array)
   result = array.each_with_object([]) do |item, obj|
     index = 0
@@ -157,5 +158,16 @@ end
 
 log_all_pairs([*1..5])
 # => [[1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [5, 1], [5, 2], [5, 3], [5, 4], [5, 5]]
+
+
+# second approach:
+def log_all_pairs2(array)
+  array.each_with_index do |_, i|
+    array.each_with_index do |_, j|
+      p [array[i], array[j]]
+    end
+  end
+end
+log_all_pairs2([*1..5])
 
 
