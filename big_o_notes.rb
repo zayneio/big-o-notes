@@ -170,4 +170,7 @@ def log_all_pairs2(array)
 end
 log_all_pairs2([*1..5])
 
-
+# Rule of thumb for big O - when calculating big O, if you see nested loops, don't add, multiply.
+# So this method becomes O(n * n), or O(n^2)
+# This means when elements get added, our methods # of operations increases quadratically.
+# The take away here is that as our input (array) increases, the # of operations for this method increases dramatically.
