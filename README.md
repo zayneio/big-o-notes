@@ -78,7 +78,7 @@ Because we can't be certain of what the input (n) might be, we simply say this i
   - Rule 4: Drop Non Dominants
 
 
-Rule 1: WORST CASE
+### Rule 1: WORST CASE
 
 Notice that our above `find_element` method is not very performant. 
 Regardless of wether the element we search for is in the first or last position of the array,
@@ -110,7 +110,7 @@ So then we will assume O(n) - Linear Time.
 
 
 
-# # # Rule 2: REMOVE CONSTANTS # # #
+### Rule 2: REMOVE CONSTANTS
 Let's take a random example method, what is big O?:
 ```ruby
 def random(input)
@@ -136,7 +136,7 @@ We care about how the line moves as our input increases.
 
 
 
-# # # Rule 3: DIFFERENT TERMS FOR INPUTS # # #
+### Rule 3: DIFFERENT TERMS FOR INPUTS
 What is Big O for the below method?
 Example method:
 ```ruby
@@ -201,7 +201,7 @@ we had 2 diff inputs?
 => Big O for this would become O(a * b) instead of O(n^2)
 
 
-Rule 4: DROP NONDOMINANTS
+### Rule 4: DROP NONDOMINANTS
 
 ```ruby
 def sum_numbers(args)
