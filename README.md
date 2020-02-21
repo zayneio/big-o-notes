@@ -11,10 +11,6 @@ your algorithm must take increases proportionally (or linearly).
 Example
 ```ruby
 # Find the index for the element if it exists in the array.
-# @param array [Array] an array to search through
-# @param element [String] the item to search for in the array
-# @param index [Integer] element's index if found in the array
-# @param iterations [Integer] number of iterations performed
 def find_element(array, element, index=nil, iterations=0)
   array.each_with_index do |el, i| 
     index = i if el == element; iterations += 1
