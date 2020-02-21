@@ -162,12 +162,13 @@ log_all_pairs([*1..5])
 
 # second approach:
 def log_all_pairs2(array)
-  array.each_with_index do |_, i|
+  result = array.each_with_object([]).with_index do |(_, obj), i|
     array.each_with_index do |_, j|
-      p [array[i], array[j]]
+      obj << [array[i], array[j]]
     end
   end
 end
+
 log_all_pairs2([*1..5])
 
 # Rule of thumb for big O - when calculating big O, if you see nested loops, don't add, multiply.

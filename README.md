@@ -188,13 +188,11 @@ log_all_pairs([*1..5])
 ```ruby
 # and second approach:
 def log_all_pairs(array)
-  result = array.each_with_object.with_index do |(_, obj), i|
+  result = array.each_with_object([]).with_index do |(_, obj), i|
     array.each_with_index do |_, j|
       obj << [array[i], array[j]]
     end
   end
-
-  p result
 end
 
 log_all_pairs([*1..5])
