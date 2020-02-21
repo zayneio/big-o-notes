@@ -42,6 +42,7 @@ def first_element(array)
 end
 ```
 
+---
 
 ### Challenge: What is Big O of the below function? 
 
@@ -68,8 +69,9 @@ end
 ```
 Because we can't be certain of what the input (n) might be, we simply say this is O(n)
 
+---
 
-Some Big O Rules
+## Some Big O Rules
   - Rule 1: Worst Case
   - Rule 2: Remove Constants
   - Rule 3: Different Terms for Inputs
