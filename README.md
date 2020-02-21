@@ -165,7 +165,7 @@ But what happens if these loops are nested?
 Log all pairs of array when array is `[1,2,3,4,5]`
 
 ```ruby
-# Here is my first attempt:
+# Here is my first approach:
 def log_all_pairs(array)
   result = array.each_with_object([]) do |item, obj|
     index = 0
