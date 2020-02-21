@@ -2,7 +2,7 @@
 
 > Any dev given enought time can solve a problem. But how efficient is their solution?
 
-[Big O](https://cdn-images-1.medium.com/max/1200/1*_nsMVEEkIr1CH8aHjTNbzA.jpeg)
+![Big O](https://cdn-images-1.medium.com/max/1200/1*_nsMVEEkIr1CH8aHjTNbzA.jpeg)
 
 ## O(n) - Linear Time
 
