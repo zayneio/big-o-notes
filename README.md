@@ -187,14 +187,18 @@ log_all_pairs([*1..5])
 
 ```ruby
 # and second approach:
-def log_all_pairs2(array)
-  array.each_with_index do |_, i|
+def log_all_pairs(array)
+  result = array.each_with_object.with_index do |(_, obj), i|
     array.each_with_index do |_, j|
-      p [array[i], array[j]]
+      obj << [array[i], array[j]]
     end
   end
+
+  p result
 end
-log_all_pairs2([*1..5])
+
+log_all_pairs([*1..5])
+# => [[1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [5, 1], [5, 2], [5, 3], [5, 4], [5, 5]]
 ```
 
 Rule of thumb for big O - when calculating big O, if you see nested loops, **don't add, multiply**.
