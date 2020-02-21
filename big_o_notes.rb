@@ -182,11 +182,11 @@ log_all_pairs2([*1..5])
 
 # # # Rule 4: DROP NONDOMINANTS # # #
 # Example method:
-def sum_numbers(args)
-  args.each { |n| puts n }
+def sum_numbers(nums)
+  nums.each { |n| puts n }
 
-  args.each do |augend|
-    args.each do |addend|
+  nums.each do |augend|
+    nums.each do |addend|
       puts augend + addend
     end
   end
@@ -197,3 +197,4 @@ end
 # So big O for this is O(n + n^2). 
 # However, rule 4 is that we basically aren't concerned with the nondominant value.
 # So ultimately Big O for this will end up being O(n^2)
+
