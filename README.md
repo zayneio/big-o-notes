@@ -124,7 +124,7 @@ def random(input)
   100.times { puts 'hi' } # O(100)
 end
 ```
-Initially, we might say 1 + 1 + n/2 + 100 = O(n/2 + 102)
+Initially, we might say 1 + 1 + n/2 + 100, or O(n/2 + 102).
 But rule 2 is we want to drop the constants. We don't really care that big O here is O(n/2 + 102),
 because in the grand scheme of things, we are focused on scalability; i.e. what happens when our 
 inputs are getting larger and larger. As n gets bigger and bigger, we aren't concerned with an extra 100,
