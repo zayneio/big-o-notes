@@ -2,6 +2,8 @@
 
 > Any dev given enought time can solve a problem. But how efficient is their solution?
 
+(https://cdn-images-1.medium.com/max/1200/1*_nsMVEEkIr1CH8aHjTNbzA.jpeg)
+
 ## O(n) - Linear Time
 
 
@@ -27,6 +29,8 @@ end
 find_element([*0..999], 25)
 # => index: 25, iterations: 1000
 ```
+
+---
 
 ## O(1) - Constant Time
 
