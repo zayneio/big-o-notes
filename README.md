@@ -8,9 +8,14 @@
 As the number of inputs (n) increase, the number of iterations 
 your algorithm must take increases proportionally (or linearly).
 
-Example
+Example:
 ```ruby
 # Find the index for the element if it exists in the array.
+#
+# @param array [Array] an array to search through
+# @param element [String] the item to search for in the array
+# @param index [Integer] element's index if found in the array
+# @param iterations [Integer] number of iterations performed
 def find_element(array, element, index=nil, iterations=0)
   array.each_with_index do |el, i| 
     index = i if el == element; iterations += 1
@@ -28,7 +33,7 @@ find_element([*0..999], 25)
 
 Regardless of the number of inputs, performance is constant
 
-Example
+Example:
 ```ruby
 # Find the first element of the array
 # @param array [Array]
@@ -37,8 +42,8 @@ def first_element(array)
 end
 ```
 
-Challenge: What is Big O of the below function? 
 
+### Challenge: What is Big O of the below function? 
 
 (Hint, you may want to go line by line)
 ```ruby
