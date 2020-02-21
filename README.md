@@ -69,7 +69,7 @@ def challenge(input)
   a # O(1) <- Should returns count towards Big O? For now let's say yes.
 end
 # => Big O(3 + 3n)
-# ( 3+ n + n + n )
+# ( 3 + n + n + n )
 ```
 Because we can't be certain of what the input (n) might be, we simply say this is O(n)
 
@@ -122,7 +122,7 @@ def random(input)
   middle = input/2 # O(1)
 
   while index < middle
-    index += 1 # O(n)
+    index += 1 # O(n/2) because we are only looping over the first half of n
   end
 
   100.times { puts 'hi' } # O(100)
