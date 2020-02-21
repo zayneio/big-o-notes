@@ -163,7 +163,7 @@ So Big O for this method would actually be something like O(a + b)
 But what happens if these loops are nested?
 
 ### Challenge: 
-Log all pairs of array [*1..5] (ex: [[1,1], [1,2], [1,3]...[2,1], [2,2]...])
+Log all pairs of array when array is `[1,2,3,4,5]`
 
 ```ruby
 # Here is my first attempt:
