@@ -2,7 +2,7 @@
 
 > Any dev given enought time can solve a problem. But how efficient is their solution?
 
-## O(n) - Linear Time.
+## O(n) - Linear Time
 
 
 As the number of inputs (n) increase, the number of iterations 
