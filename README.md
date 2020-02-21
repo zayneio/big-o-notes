@@ -142,7 +142,6 @@ We care about how the line moves as our input increases.
 
 ### Rule 3: DIFFERENT TERMS FOR INPUTS
 What is Big O for the below method?
-Example method:
 ```ruby
 def double_loop(array1, array2)
   array1.each do |arr|
