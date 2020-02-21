@@ -1,12 +1,14 @@
-Big O Notation (asymptotic notation)
+# Big O Notation (asymptotic notation)
 
-Any dev given enought time can solve a problem. But how efficient is their solution?
+> Any dev given enought time can solve a problem. But how efficient is their solution?
 
-O(n) ==> Linear Time
+## O(n) - Linear Time.
+
+
 As the number of inputs (n) increase, the number of iterations 
 your algorithm must take increases proportionally (or linearly).
 
-# # # Example # # #
+Example
 ```ruby
 # Find the index for the element if it exists in the array.
 # @param array [Array] an array to search through
@@ -25,7 +27,9 @@ find_element([*0..999], 25)
 # => index: 25, iterations: 1000
 ```
 
-O(1) ==> Constant Time
+## O(1) - Constant Time
+
+
 Regardless of the number of inputs, performance is constant
 
 Example
@@ -38,8 +42,9 @@ end
 ```
 
 Challenge: What is Big O of the below function? 
+
+
 (Hint, you may want to go line by line)
-Remember, loops are linear time
 ```ruby
 def challenge(input)
   a = 10 # 0(1) <- Should assignment count towards Big O? For now let's say yes.
