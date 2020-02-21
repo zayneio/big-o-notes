@@ -161,10 +161,11 @@ Rule 3 states we must use different terms for different inputs.
 So Big O for this method would actually be something like O(a + b)
 
 But what happens if these loops are nested?
-Challenge: Log all pairs of array [*1..5] (ex: [[1,1], [1,2], [1,3]...[2,1], [2,2]...])
-Here's my first approach:
+
+### Challenge: Log all pairs of array [*1..5] (ex: [[1,1], [1,2], [1,3]...[2,1], [2,2]...])
 
 ```ruby
+# Here is my first attempt:
 def log_all_pairs(array)
   result = array.each_with_object([]) do |item, obj|
     index = 0
@@ -184,7 +185,7 @@ log_all_pairs([*1..5])
 ```
 
 ```ruby
-# second approach:
+# and second approach:
 def log_all_pairs2(array)
   array.each_with_index do |_, i|
     array.each_with_index do |_, j|
@@ -195,7 +196,7 @@ end
 log_all_pairs2([*1..5])
 ```
 
-Rule of thumb for big O - when calculating big O, if you see nested loops, don't add, multiply.
+Rule of thumb for big O - when calculating big O, if you see nested loops, **don't add, multiply**.
 So this method becomes O(n * n), or O(n^2)
 This means when elements get added, our methods # of operations increases quadratically.
 The take away here is that as our input (array) increases, the # of operations for this method increases dramatically.
